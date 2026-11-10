@@ -1,0 +1,90 @@
+LICENCIA DE USO - FREEWARE
+Copyright (c) 2026 Pablo. Todos los derechos reservados.
+(All rights reserved.)
+
+myRetopoUV se distribuye de forma GRATUITA como freeware. Gratuito no significa
+libre: el autor conserva la titularidad y todos los derechos de explotación.
+
+1. CONCESIÓN DE USO
+   Se concede permiso, sin coste, para descargar, instalar y usar este programa
+   con fines personales o profesionales, en cualquier número de equipos propios.
+
+2. RESTRICCIONES
+   Sin autorización previa y por escrito del autor, NO se permite:
+   a) modificar, adaptar, traducir o crear obras derivadas del programa;
+   b) vender, alquilar, sublicenciar o explotar comercialmente el programa,
+      ni incluirlo en productos o servicios de pago;
+   c) redistribuir, publicar o compartir el programa o sus archivos, salvo
+      mediante enlace a la página oficial de descarga;
+   d) retirar u ocultar los avisos de copyright, autoría o esta licencia;
+   e) usar el nombre o los logotipos del proyecto para promocionar productos
+      derivados sin permiso.
+
+3. INGENIERÍA INVERSA
+   No se permite descompilar, desensamblar ni aplicar ingeniería inversa al
+   programa, salvo en la medida en que la ley aplicable lo permita de forma
+   imperativa.
+
+4. TITULARIDAD
+   El programa, su código fuente, su diseño, su nombre y su documentación son
+   propiedad del autor. Esta licencia no transfiere ningún derecho de propiedad
+   intelectual; solo concede el derecho de uso descrito en el punto 1.
+
+5. COMPONENTES DE TERCEROS
+   El programa se distribuye junto a componentes de terceros con sus propias
+   licencias, que se conservan y prevalecen sobre esta:
+   - Electron (licencia MIT)
+   - Chromium y componentes de Chromium (licencia BSD 3-Clause y otras)
+   - three.js y fflate (licencia MIT)
+   - NSIS, empleado para generar el instalador (zlib/libpng, bzip2, CPL 1.0)
+   - NVIDIA CUDA Toolkit 13.4: se redistribuye cudart_static.lib, permitido
+     expresamente por el apartado 2.6 (Attachment A) de su EULA
+   Los textos completos de esas licencias se incluyen en la distribucion, en
+   los archivos LICENSE.electron.txt, LICENSES.chromium.html y
+   THIRD-PARTY-NOTICES.txt, instalados junto al ejecutable. Los avisos de
+   copyright de three.js y fflate se conservan ademas dentro del propio
+   ejecutable.
+
+6. SIN GARANTÍA
+   EL PROGRAMA SE ENTREGA "TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO,
+   EXPRESA O IMPLÍCITA, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS DE
+   COMERCIABILIDAD, IDONEIDAD PARA UN FIN CONCRETO Y NO INFRACCIÓN.
+   El uso del programa es responsabilidad exclusiva del usuario.
+
+7. LIMITACIÓN DE RESPONSABILIDAD
+   En la máxima medida permitida por la ley, el autor no será responsable de
+   ningún daño directo, indirecto, incidental, especial o consecuente
+   (incluida la pérdida de datos, de beneficios o la interrupción de la
+   actividad) derivado del uso o de la imposibilidad de usar el programa,
+   incluso si se hubiera advertido de tal posibilidad.
+
+8. TERMINACIÓN
+   Esta licencia se extingue automáticamente si se incumple cualquiera de sus
+   condiciones. En tal caso deberá cesarse el uso y eliminarse todas las
+   copias del programa.
+
+9. ACEPTACIÓN
+   Instalar, ejecutar o utilizar el programa implica la aceptación de los
+   términos de esta licencia. Si no está de acuerdo, no utilice el programa.
+
+--------------------------------------------------------------------------
+SUMMARY (ENGLISH)
+
+myRetopoUV is freeware, not free software. Copyright (c) 2026 Pablo.
+All rights reserved.
+
+You may download, install and use this program free of charge for personal or
+professional purposes. You may NOT modify, create derivative works from, sell,
+rent, sublicense, redistribute, or commercially exploit the program, nor remove
+any copyright or authorship notice, without the author's prior written
+permission. Reverse engineering is prohibited except where mandatory law
+allows it. Third-party components (Electron, Chromium, three.js, fflate, NSIS and
+NVIDIA CUDA) remain under their own licenses, reproduced in THIRD-PARTY-NOTICES.txt,
+LICENSE.electron.txt and LICENSES.chromium.html.
+
+THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+
+--------------------------------------------------------------------------
+Contacto / Contact: pabloyt@gmail.com
