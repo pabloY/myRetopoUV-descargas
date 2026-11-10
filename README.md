@@ -1,16 +1,16 @@
 # myRetopoUV
 
-Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX** u **OBJ**) alineados en el mismo espacio 3D y proyecta el **color base** del Hi Poly sobre la malla de retopología. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom y dos vistas UV. Funciona sin conexión.
+Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX** u **OBJ**) alineados en el mismo espacio 3D y proyecta el **color base** del Hi Poly sobre la malla de retopología. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión.
 
 ## Descargar
 
-**[⬇ Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
+**[Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myRetopoUV-Setup-0.1.0-x64.exe`**: instalador (única descarga disponible; no hay versión portable).
+- **`myRetopoUV-Setup-0.3.0-x64.exe`**: instalador (única descarga disponible; no hay versión portable).
 
-**Requisitos:** Windows 10 u 11 de 64 bits y una tarjeta gráfica **NVIDIA** de arquitectura **sm_75** (RTX 20xx, GTX 16xx). No hace falta ser administrador ni tener conexión a internet, ni instalar el CUDA Toolkit: el runtime va dentro del programa y del controlador de NVIDIA solo se usa el que ya tienes instalado.
+**Requisitos:** Windows 10 u 11 de 64 bits y, para acelerar, una tarjeta **NVIDIA** con capacidad de cómputo **7.5 o superior**: GTX 16xx y todas las RTX. Un solo binario incluye código nativo para sm_75, sm_80, sm_86, sm_89, sm_90, sm_100 y sm_120, más PTX de reserva para arquitecturas futuras. No hace falta ser administrador, ni tener conexión a internet, ni instalar el CUDA Toolkit: del controlador de NVIDIA solo se usa el que ya tienes instalado.
 
-**Aviso sobre la GPU:** el motor de bake está compilado únicamente para sm_75. En tarjetas de arquitecturas posteriores (RTX 30xx, 40xx) puede no ejecutarse, porque el binario no incluye PTX. Si te ocurre, ponte en contacto e indico cómo generar la versión para tu tarjeta.
+**Sin GPU NVIDIA compatible** el programa funciona igual: el cálculo se hace en la CPU, con el mismo resultado y más tiempo. La cabecera de la ventana indica siempre qué motor se está usando, y en el caso de una GPU AMD avisa de que no se está aprovechando.
 
 ## Instalar
 
@@ -20,40 +20,57 @@ Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para
    - Windows muestre «Windows protegió su PC»: pulsa **Más información → Ejecutar de todas formas**.
 3. Para desinstalarlo: *Configuración → Aplicaciones → myRetopoUV → Desinstalar*, o el desinstalador que hay en la carpeta del programa.
 
-Si quieres comprobar que la descarga está completa, compara su huella SHA-256 (está en las notas de cada versión) con la que da PowerShell:
+Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da PowerShell:
 
 ```powershell
-Get-FileHash .\myRetopoUV-Setup-0.1.0-x64.exe -Algorithm SHA256
+Get-FileHash .\myRetopoUV-Setup-0.3.0-x64.exe -Algorithm SHA256
 ```
 
+La de la versión 0.3.0 es `b10521383b0b8e8a9b67f555ab2e9118d27f27f7d3f7d28a260a47a76fa7dbd1`.
 ## Uso rápido
 
-1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX u OBJ), alineados en el mismo espacio 3D. Las UV del Lo Poly deben ser únicas dentro de 0–1 o estar repartidas en tiles UDIM.
-2. Pulsa **Cargar mapa de color** y elige la textura de origen (PNG, JPEG o WebP).
+1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX u OBJ), alineados en el mismo espacio 3D. Las UV del Lo Poly deben ser únicas dentro de 0-1 o estar repartidas en tiles UDIM.
+2. Según las tiles que contenga el Hi Poly aparecen los botones **Cargar mapa 1001**, **Cargar mapa 1002**, **Cargar mapa 1011**… Uno por cada UDIM, sin diálogos intermedios. El botón se pone en verde y muestra el nombre del archivo cuando ese UDIM ya tiene su mapa, y al pulsarlo de nuevo se reemplaza.
 3. Ajusta **Resolución**, **Distancia de proyección** (en unidades del modelo), **Antialiasing** y el **Relleno / previsualización**:
    - *Sin relleno*: solo los píxeles que reciben proyección.
    - *Dilatación infinita*: extiende el color hasta el borde de la isla.
    - *Dilatación + transparente*, *+ color de fondo* o *+ difusión*: rellenan el margen con transparencia, con el color elegido o difuminando el color de los bordes.
-   - **Margen (píxeles)**: ancho del relleno, de 0 a 256. El color de fondo se elige con el cuadro de color, en RGB o HEX.
-4. Pulsa **Calcular**. La barra de progreso muestra el avance y **Cancelar** interrumpe el cálculo. El resultado aparece en el visor **Resultado**, junto al **Original**: arrastra para orbitar y usa la rueda para acercar. Las dos vistas de abajo muestran las UV del Hi Poly y del Lo Poly, con navegación por tiles UDIM.
-5. **Guardar textura _retopo** escribe el PNG junto al mapa de color que cargaste, con el nombre del mapa y el sufijo `_retopo`, o `_retopo_UDIM` cuando hay varios tiles. Si el archivo ya existe, pide confirmación antes de reemplazarlo.
+   - **Margen (píxeles)**: ancho del relleno, de 0 a 256. El color de fondo se elige con un selector HSV con cuadrado de saturación y valor, barra de tono y campos HEX y RGB.
+4. Pulsa **Calcular**. La barra de progreso muestra el avance por UDIM y el resultado aparece en el visor **Lo Poly**, junto al **Hi Poly**: arrastra para orbitar y usa la rueda para acercar. Las dos vistas inferiores muestran las UV de cada modelo con navegación por tiles.
+5. **Guardar textura** abre un diálogo para elegir la carpeta de destino, con opción de crear una nueva. Se recuerda la última carpeta usada y se pide confirmación antes de reemplazar un archivo existente. El nombre sale del mapa de origen, con el sufijo `_retopo` o `_retopo_UDIM` cuando hay varios tiles.
 
-**Limitaciones conocidas:** el FBX debe ser estático (no se admiten esqueletos), no se leen los MTL ni las texturas externas de un FBX (el color se carga con el botón del mapa) y las caras que cruzan el borde entre dos tiles UDIM se rechazan.
+**Distribución de la ventana.** La interfaz está pensada para caber en **1920×1080 sin desplazamiento** en una rejilla de cuatro visores. Cada visor se maximiza con el **icono de su esquina superior derecha** o con **Alt+W** sobre el visor bajo el puntero, y se restaura repitiendo la acción o con **Escape**.
+
+**Limitaciones conocidas:** el FBX debe ser estático (no se admiten esqueletos), no se leen los MTL ni las texturas externas de un FBX (el color se carga con los botones de mapa) y las caras que cruzan el borde entre dos tiles UDIM se rechazan.
+
+**Rendimiento orientativo** (205.000 triángulos, mapa de 2048, medido en una RTX 2060): a 2048 con AA 4 tarda 0,9 s por UDIM en GPU frente a unos 35 s en CPU; a 4096 la diferencia es de unos 3 s frente a casi 3 minutos. Por debajo de 1024 el arranque del motor pesa más que el cálculo y la ventaja se reduce.
 
 ## Historial de versiones
+
+### 0.3.0
+
+- **Interfaz en rejilla 2×2** que cabe en 1920×1080 sin desplazamiento, con los cuatro visores adaptándose al tamaño de la ventana.
+- **Maximizar cada visor** con el icono de su esquina superior derecha o con **Alt+W**; **Escape** restaura la rejilla.
+- **Guardar eligiendo carpeta**: diálogo de destino con opción de crear una nueva, memoria de la última carpeta y confirmación antes de reemplazar.
+- **Un botón de mapa por UDIM** del Hi Poly, generado automáticamente y marcado en verde cuando ya está cargado. Sustituye al botón único con diálogo de asignación.
+- Nueva prueba automática de maquetación dentro de `npm test`.
+
+### 0.2.0
+
+- **Motor de bake reescrito**: BVH sobre el Hi Poly, rejilla de triángulos por tile UV, muestreo de color dentro del kernel y antialiasing de 1 a 8 muestras en una sola pasada.
+- **Indicador permanente del motor** en la cabecera: GPU NVIDIA con su modelo, CPU con su número de hilos, o aviso de GPU AMD no aprovechada.
+- **Selector de color HSV** con cuadrado de saturación y valor, barra de tono, HEX y RGB.
+- **Un solo binario CUDA** con código nativo para sm_75 a sm_120 y PTX de reserva: ya no hace falta una compilación por arquitectura.
+- Pruebas que comparan el bake **byte a byte** con una implementación de referencia.
 
 ### 0.1.0
 
 - **Primera versión publicada** en este repositorio.
 - Transferencia de color del Hi Poly al Lo Poly por proyección sobre las nuevas UV, con motor **CUDA**.
 - Carga de **GLB, FBX y OBJ** para los dos modelos, y de la textura de origen en **PNG, JPEG o WebP**.
-- **Resolución** de 256 a 8192 y **distancia de proyección** configurable en unidades del modelo.
-- **Antialiasing** de 2, 4 u 8 muestras, o sin AA.
-- **Relleno** con margen de 0 a 256 píxeles: sin relleno, dilatación infinita, dilatación con transparencia, con color de fondo o por difusión.
-- **Color de fondo** con selector en RGB y HEX.
-- **Barra de progreso** durante el cálculo y botón de **cancelar**.
-- **Dos visores 3D** (original y resultado) con órbita y zoom, y **dos vistas UV** con navegación por tiles.
-- **Guardado** del PNG junto al mapa de origen, con sufijo `_retopo` o `_retopo_UDIM`.
+- **Resolución** de 256 a 8192, **distancia de proyección** configurable y antialiasing de 2, 4 u 8 muestras.
+- **Relleno** con margen de 0 a 256 píxeles en sus cinco modos, y color de fondo en RGB y HEX.
+- Dos visores 3D con órbita y zoom, dos vistas UV y guardado del PNG junto al mapa de origen.
 - Instalador **por usuario**, sin permisos de administrador, con accesos directos en el escritorio y el menú Inicio.
 
 ## Licencia
