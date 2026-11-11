@@ -6,7 +6,7 @@ Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para
 
 **[Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myRetopoUV-Setup-1.2.0-x64.exe`**: instalador (única descarga disponible; no hay versión portable).
+- **`myRetopoUV-Setup-1.2.1-x64.exe`**: instalador (única descarga disponible; no hay versión portable).
 
 **Requisitos:** Windows 10 u 11 de 64 bits y, para acelerar, una tarjeta **NVIDIA** con capacidad de cómputo **7.5 o superior**: GTX 16xx y todas las RTX. Un solo binario incluye código nativo para sm_75, sm_80, sm_86, sm_89, sm_90, sm_100 y sm_120, más PTX de reserva para arquitecturas futuras. No hace falta ser administrador, ni tener conexión a internet, ni instalar el CUDA Toolkit: del controlador de NVIDIA solo se usa el que ya tienes instalado.
 
@@ -23,10 +23,11 @@ Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para
 Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da PowerShell:
 
 ```powershell
-Get-FileHash .\myRetopoUV-Setup-1.2.0-x64.exe -Algorithm SHA256
+Get-FileHash .\myRetopoUV-Setup-1.2.1-x64.exe -Algorithm SHA256
 ```
 
-La de la versión 1.2.0 es `8c6d4e085583a36173e0957ad5eb8d9e65e20ef8a62d3314ec5cdd33a4ce677e`.
+La de la versión 1.2.1 es `3ee35635c3136dd7fd2832b003b4b614c779d7c4c59e3ab43e0fbd6e44c4a036`.
+
 ## Uso rápido
 
 1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX, OBJ, USDZ o USDA), alineados en el mismo espacio 3D. Las UV del Lo Poly deben ser únicas dentro de 0-1 o estar repartidas en tiles UDIM. Al abrir el Hi Poly se detectan solas las texturas que lo acompañan y aparecen en el selector **Mapa de textura**, agrupadas por tipo (Base Color, Normal, Roughness, Metallic, Metallic/Roughness, Height, Ambient Occlusion, Emissive, Opacidad y Specular).
@@ -50,6 +51,12 @@ En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o
 **Rendimiento orientativo** (205.000 triángulos, mapa de 2048, medido en una RTX 2060): a 2048 con AA 4 tarda 0,9 s por UDIM en GPU frente a unos 35 s en CPU; a 4096 la diferencia es de unos 3 s frente a casi 3 minutos. Por debajo de 1024 el arranque del motor pesa más que el cálculo y la ventaja se reduce.
 
 ## Historial de versiones
+
+### 1.2.1
+
+- **Créditos y licencias**: botón al pie de la barra lateral que abre un diálogo con la versión instalada, la autoría y el contacto, la dirección de este repositorio de descargas, la licencia de la aplicación y los avisos legales de los componentes de terceros: Electron, Chromium, three.js, fflate, NSIS y el runtime de NVIDIA CUDA.
+- **Corregido**: el icono de maximizar de los dos visores 3D queda pegado a la esquina superior derecha, igual que en las vistas UV, en lugar de aparecer detrás del nombre del archivo.
+- **Corregido**: los atajos de teclado no actúan con un diálogo abierto; Escape cierra el diálogo en vez de desmaximizar un visor a la vez.
 
 ### 1.2.0
 
@@ -110,6 +117,8 @@ En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o
 Copyright (c) 2026 Pablo. **Todos los derechos reservados.**
 
 Puedes instalar y usar el programa; no está permitido copiarlo, redistribuirlo, modificarlo ni venderlo sin permiso por escrito del autor. Consulta [LICENSE](LICENSE).
+
+Dentro de la aplicación, el botón **Créditos y licencias**, al pie de la barra lateral, muestra la versión instalada, la autoría y estos mismos avisos.
 
 myRetopoUV usa componentes de terceros con sus propias licencias: Electron (MIT), Chromium y sus librerías (BSD 3-Clause y otras), three.js (MIT), fflate (MIT), NSIS (zlib/libpng, bzip2 y CPL 1.0) y el runtime de NVIDIA CUDA, enlazado estáticamente en el motor de bake (`cudart_static.lib`, redistribuible según el apartado 2.6 del EULA del CUDA Toolkit). Detalles en [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
 
