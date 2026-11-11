@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+  <title>myApps</title>
+  <defs><clipPath id="pixel"><rect x="69" y="16" width="13" height="13" rx="3"/></clipPath></defs>
+  <rect width="100" height="100" rx="22" fill="#172033"/>
+  <path d="M27 74V46a11.5 11.5 0 0 1 23 0V74M50 46a11.5 11.5 0 0 1 23 0V74" fill="none" stroke="#e9eef6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clip-path="url(#pixel)"><rect x="69" y="16" width="13" height="13" fill="#f28c3c"/><rect x="69" y="16" width="6.5" height="6.5" fill="#2fd1ae"/></g>
+</svg>

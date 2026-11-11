@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="640" height="200">
+  <title>myApps</title>
+  <defs><clipPath id="pixel"><rect x="69" y="16" width="13" height="13" rx="3"/></clipPath></defs>
+  <rect width="100" height="100" rx="22" fill="#172033"/>
+  <path d="M27 74V46a11.5 11.5 0 0 1 23 0V74M50 46a11.5 11.5 0 0 1 23 0V74" fill="none" stroke="#e9eef6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clip-path="url(#pixel)"><rect x="69" y="16" width="13" height="13" fill="#f28c3c"/><rect x="69" y="16" width="6.5" height="6.5" fill="#2fd1ae"/></g>
+  <g transform="translate(126 16.4) scale(0.62)" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="#8d9ab0" d="M4.5 74V46a11.5 11.5 0 0 1 23 0V74M27.5 46a11.5 11.5 0 0 1 23 0V74M71.5 34.5V58a11.5 11.5 0 0 0 23 0V34.5M94.5 58V82a11.5 11.5 0 0 1-11.5 11.5H75.5"/>
+    <path stroke="#e9eef6" d="M115.5 74V34a14 14 0 0 1 28 0V74M115.5 54H143.5M164.5 34.5V94M164.5 54.25a19.75 19.75 0 1 0 39.5 0a19.75 19.75 0 1 0-39.5 0M225 34.5V94M225 54.25a19.75 19.75 0 1 0 39.5 0a19.75 19.75 0 1 0-39.5 0M302.5 37.4A9.9 9.9 0 1 0 295.5 54.3A9.9 9.9 0 1 1 288.5 71.2"/>
+  </g>
+</svg>

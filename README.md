@@ -132,6 +132,15 @@ En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o
 - Dos visores 3D con órbita y zoom, dos vistas UV y guardado del PNG junto al mapa de origen.
 - Instalador **por usuario**, sin permisos de administrador, con accesos directos en el escritorio y el menú Inicio.
 
+## Creado por
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="marca/myApps-logo-oscuro.svg">
+  <img src="marca/myApps-logo-claro.svg" alt="myApps" height="56">
+</picture>
+
+**myApps** · pabloyt@gmail.com
+
 ## Licencia
 
 Copyright (c) 2026 Pablo. **Todos los derechos reservados.**
