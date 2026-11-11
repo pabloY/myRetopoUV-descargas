@@ -1,12 +1,12 @@
 # myRetopoUV
 
-Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX**, **OBJ**, **USDZ** o **USDA**) alineados en el mismo espacio 3D y proyecta el mapa del Hi Poly que elijas —color base, normal, rugosidad, metalicidad, altura, oclusión, emisivo u opacidad— sobre la malla de retopología. Las texturas que acompañan al modelo se detectan y agrupan solas, tanto con nombres tipo Substance Painter como incrustadas en el propio archivo. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión.
+Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX**, **OBJ**, **USDZ** o **USDA**) alineados en el mismo espacio 3D y proyecta el mapa del Hi Poly que elijas —color base, normal, rugosidad, metalicidad, altura, oclusión, emisivo u opacidad— sobre la malla de retopología. Las texturas que acompañan al modelo se detectan y agrupan solas, tanto con nombres tipo Substance Painter como incrustadas en el propio archivo. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, un visor superpuesto con el recuento de polígonos, tris y vértices de cada modelo, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión.
 
 ## Descargar
 
 **[Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myRetopoUV-Setup-1.1.0-x64.exe`**: instalador (única descarga disponible; no hay versión portable).
+- **`myRetopoUV-Setup-1.2.0-x64.exe`**: instalador (única descarga disponible; no hay versión portable).
 
 **Requisitos:** Windows 10 u 11 de 64 bits y, para acelerar, una tarjeta **NVIDIA** con capacidad de cómputo **7.5 o superior**: GTX 16xx y todas las RTX. Un solo binario incluye código nativo para sm_75, sm_80, sm_86, sm_89, sm_90, sm_100 y sm_120, más PTX de reserva para arquitecturas futuras. No hace falta ser administrador, ni tener conexión a internet, ni instalar el CUDA Toolkit: del controlador de NVIDIA solo se usa el que ya tienes instalado.
 
@@ -23,10 +23,10 @@ Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para
 Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da PowerShell:
 
 ```powershell
-Get-FileHash .\myRetopoUV-Setup-1.1.0-x64.exe -Algorithm SHA256
+Get-FileHash .\myRetopoUV-Setup-1.2.0-x64.exe -Algorithm SHA256
 ```
 
-La de la versión 1.1.0 es `7701c7329fc73ad6b911cc9dc2fb2b8088f88cd1fd2679a0cf02dd2ab1f41d12`.
+La de la versión 1.2.0 es `8c6d4e085583a36173e0957ad5eb8d9e65e20ef8a62d3314ec5cdd33a4ce677e`.
 ## Uso rápido
 
 1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX, OBJ, USDZ o USDA), alineados en el mismo espacio 3D. Las UV del Lo Poly deben ser únicas dentro de 0-1 o estar repartidas en tiles UDIM. Al abrir el Hi Poly se detectan solas las texturas que lo acompañan y aparecen en el selector **Mapa de textura**, agrupadas por tipo (Base Color, Normal, Roughness, Metallic, Metallic/Roughness, Height, Ambient Occlusion, Emissive, Opacidad y Specular).
@@ -37,19 +37,28 @@ La de la versión 1.1.0 es `7701c7329fc73ad6b911cc9dc2fb2b8088f88cd1fd2679a0cf02
    - *Dilatación + transparente*, *+ color de fondo* o *+ difusión*: rellenan el margen con transparencia, con el color elegido o difuminando el color de los bordes.
    - **Margen (píxeles)**: ancho del relleno, de 0 a 256. El color de fondo se elige con un selector HSV con cuadrado de saturación y valor, barra de tono y campos HEX y RGB.
 4. Pulsa **Calcular**. La barra de progreso muestra el avance por UDIM y el resultado aparece en el visor **Lo Poly**, junto al **Hi Poly**: arrastra para orbitar y usa la rueda para acercar. Las dos vistas inferiores muestran las UV de cada modelo, con su propio selector de UDIM en la barra y zoom, desplazamiento y doble clic para encuadrar.
-5. **Guardar textura** abre un diálogo para elegir la carpeta de destino, con opción de crear una nueva. Se recuerda la última carpeta usada y se pide confirmación antes de reemplazar un archivo existente. El nombre sale del mapa de origen o, si el mapa se detectó automáticamente, del nombre del modelo, con el sufijo `_retopo` o `_retopo_UDIM` cuando hay varios tiles.
+5. **Guardar textura** abre un diálogo para elegir la carpeta de destino, con opción de crear una nueva. Se recuerda la última carpeta usada y se pide confirmación antes de reemplazar un archivo existente. El nombre sale del modelo y del mapa de origen y añade siempre el tipo de mapa y el UDIM, del estilo `Modelo_retopo_basecolor_1001.png`, de modo que los distintos mapas del mismo modelo no se pisan al exportarlos a la misma carpeta.
 
 **Distribución de la ventana.** La interfaz está pensada para caber en **1920×1080 sin desplazamiento** en una rejilla de cuatro visores. Cada visor se maximiza con el **icono de su esquina superior derecha** o con **Alt+W** sobre el visor bajo el puntero, y se restaura repitiendo la acción o con **Escape**.
 
-**Superponer.** El botón que hay encima de los dos visores 3D reúne el Hi Poly y el Lo Poly en un único visor, con el Lo Poly semitransparente y su malla en alambre, para comprobar de un vistazo que la retopología cae sobre la superficie original. El mismo botón, que pasa a llamarse **Salir de superposición**, devuelve la rejilla.
+**Superponer.** El botón que hay encima de los dos visores 3D reúne el Hi Poly y el Lo Poly en un único visor, con el Lo Poly semitransparente y su malla en alambre, para comprobar de un vistazo que la retopología cae sobre la superficie original. El mismo botón, que pasa a llamarse **Salir de superposición**, devuelve la rejilla. En ese visor, los botones **HiPoly** y **LoPoly** de la cabecera ocultan o devuelven cada modelo por separado, para revisar uno de los dos sin el otro delante.
 
-En la cabecera de cada visor aparece el nombre del archivo abierto.
+En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o **UV LoPoly** va seguido del nombre del archivo abierto, y en la esquina inferior derecha de los visores 3D y del superpuesto se lee el número de **polígonos, tris y vértices** del modelo cargado.
 
 **Limitaciones conocidas:** el FBX debe ser estático (no se admiten esqueletos); en el FBX no se leen los MTL y las texturas se localizan por el nombre del archivo junto al modelo; el USD binario (.usdc) no está soportado y hay que exportar a .usda o .usdz; y las caras que cruzan el borde entre dos tiles UDIM se rechazan.
 
 **Rendimiento orientativo** (205.000 triángulos, mapa de 2048, medido en una RTX 2060): a 2048 con AA 4 tarda 0,9 s por UDIM en GPU frente a unos 35 s en CPU; a 4096 la diferencia es de unos 3 s frente a casi 3 minutos. Por debajo de 1024 el arranque del motor pesa más que el cálculo y la ventaja se reduce.
 
 ## Historial de versiones
+
+### 1.2.0
+
+- Los tres visores 3D muestran en su esquina inferior derecha el número de **polígonos, tris y vértices** del modelo, con los dos modelos separados por una barra en el visor superpuesto.
+- En la superposición, dos botones (**HiPoly** y **LoPoly**) ocultan y devuelven cada modelo por separado.
+- Al guardar, el nombre del archivo incluye siempre el **mapa** y el **UDIM**: `Modelo_retopo_basecolor_1001.png` en lugar de `Modelo_retopo_1001.png`, así que dos mapas del mismo modelo ya no se pisan.
+- Los modelos se llaman **HiPoly** y **LoPoly**, en CamelCase, en los botones de apertura y en las cabeceras de los cuatro visores.
+- El nombre del archivo abierto aparece detrás de ese rótulo, separado unos cuatro caracteres, en lugar de sustituirlo.
+- El visor superpuesto deja de tener botón de maximizar, porque cuando está activo ya ocupa él solo toda el área de visores.
 
 ### 1.1.0
 
