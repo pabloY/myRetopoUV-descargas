@@ -1,13 +1,13 @@
 # myRetopoUV
 
-Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX**, **OBJ**, **USDZ** o **USDA**) alineados en el mismo espacio 3D y proyecta el mapa del Hi Poly que elijas —color base, normal, rugosidad, metalicidad, altura, oclusión, emisivo u opacidad— sobre la malla de retopología. Las texturas que acompañan al modelo se detectan y agrupan solas, tanto con nombres tipo Substance Painter como incrustadas en el propio archivo. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, resaltado de islas UV y de polígonos con un clic, un visor superpuesto con el recuento de polígonos, tris y vértices de cada modelo, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión.
+Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX**, **OBJ**, **USDZ** o **USDA**) alineados en el mismo espacio 3D y proyecta el mapa del Hi Poly que elijas —color base, normal, rugosidad, metalicidad, altura, oclusión, emisivo u opacidad— sobre la malla de retopología. Las texturas que acompañan al modelo se detectan y agrupan solas, tanto con nombres tipo Substance Painter como incrustadas en el propio archivo. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, resaltado de islas UV y de polígonos con un clic, un visor superpuesto con el recuento de polígonos, tris y vértices de cada modelo en el que se puede mover, girar y escalar cualquiera de los dos para alinearlos, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión.
 
 ## Descargar
 
 **[Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myRetopoUV-Setup-1.3.0-x64.exe`**: instalador. Se instala solo para tu usuario, sin permisos de administrador ni aviso de UAC.
-- **`myRetopoUV-1.3.0-portable-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myRetopoUV.exe`; no instala nada y se puede llevar en un lápiz USB.
+- **`myRetopoUV-Setup-1.3.1-x64.exe`**: instalador. Se instala solo para tu usuario, sin permisos de administrador ni aviso de UAC.
+- **`myRetopoUV-1.3.1-portable-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myRetopoUV.exe`; no instala nada y se puede llevar en un lápiz USB.
 
 Las dos formas dejan el programa igual de completo: llevan el motor de bake y las licencias junto al ejecutable.
 
@@ -17,7 +17,8 @@ Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archi
 
 | Versión | Instalador | Portable | Notas |
 |---|---|---|---|
-| **1.3.0** (última) | [myRetopoUV-Setup-1.3.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-Setup-1.3.0-x64.exe) | [myRetopoUV-1.3.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-1.3.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.0) |
+| **1.3.1** (última) | [myRetopoUV-Setup-1.3.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.1/myRetopoUV-Setup-1.3.1-x64.exe) | [myRetopoUV-1.3.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.1/myRetopoUV-1.3.1-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.1) |
+| 1.3.0 | [myRetopoUV-Setup-1.3.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-Setup-1.3.0-x64.exe) | [myRetopoUV-1.3.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-1.3.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.0) |
 | 1.2.1 | [myRetopoUV-Setup-1.2.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.2.1/myRetopoUV-Setup-1.2.1-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.2.1) |
 | 1.2.0 | [myRetopoUV-Setup-1.2.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.2.0/myRetopoUV-Setup-1.2.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.2.0) |
 | 1.1.0 | [myRetopoUV-Setup-1.1.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.1.0/myRetopoUV-Setup-1.1.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.1.0) |
@@ -43,19 +44,19 @@ Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archi
 Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da PowerShell:
 
 ```powershell
-Get-FileHash .\myRetopoUV-Setup-1.3.0-x64.exe -Algorithm SHA256
+Get-FileHash .\myRetopoUV-Setup-1.3.1-x64.exe -Algorithm SHA256
 ```
 
-Las de la versión 1.3.0 son:
+Las de la versión 1.3.1 son:
 
 ```
-myRetopoUV-Setup-1.3.0-x64.exe        282d34f4adb7316a035b5fe8283a1252fff484c37326b9292708f65f75b6f2a4
-myRetopoUV-1.3.0-portable-x64.zip     2b0c2a3c99cfca67bc26b8a02a6d4509b076c570d137f5951b42125337fd5f95
+myRetopoUV-Setup-1.3.1-x64.exe        c4b0088416fdc0a0e5bcf2b95c68e18197ab7ec951244d0abdc98722f6f9d79f
+myRetopoUV-1.3.1-portable-x64.zip     d2b25f7f0e00578bf8df588b3d52d1cf3d7e5e5a16df15c33a921618f379853c
 ```
 
 ## Uso rápido
 
-1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX, OBJ, USDZ o USDA), alineados en el mismo espacio 3D. Las UV del Lo Poly deben ser únicas dentro de 0-1 o estar repartidas en tiles UDIM. Al abrir el Hi Poly se detectan solas las texturas que lo acompañan y aparecen en el selector **Mapa de textura**, agrupadas por tipo (Base Color, Normal, Roughness, Metallic, Metallic/Roughness, Height, Ambient Occlusion, Emissive, Opacidad y Specular).
+1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX, OBJ, USDZ o USDA), alineados en el mismo espacio 3D, con sus botones o arrastrando el archivo sobre los visores de cada modelo. Las UV del Lo Poly deben ser únicas dentro de 0-1 o estar repartidas en tiles UDIM. Al abrir el Hi Poly se detectan solas las texturas que lo acompañan y aparecen en el selector **Mapa de textura**, agrupadas por tipo (Base Color, Normal, Roughness, Metallic, Metallic/Roughness, Height, Ambient Occlusion, Emissive, Opacidad y Specular).
 2. Elige en **Mapa de textura** el mapa que quieres transferir. Los visores y las vistas UV muestran ese mapa, y **Calcular** transfiere al Lo Poly solo el que esté elegido, de modo que el mismo modelo sirve para generar la textura de color, la de normales y las demás. Según las tiles que contenga el Hi Poly aparecen además los botones **Cargar mapa 1001**, **Cargar mapa 1002**, **Cargar mapa 1011**… para sustituir o añadir texturas a mano en el mapa activo; el botón se pone en verde y muestra el nombre del archivo cuando ese UDIM ya tiene su mapa.
 3. Ajusta **Resolución**, **Distancia de proyección**, **Antialiasing** y el **Relleno / previsualización**. La distancia se mide como **porcentaje del propio objeto**: el 100 % es la diagonal del cubo que envuelve exactamente su geometría, sin luces ni cámaras, y por defecto es el 10 %.
    - *Sin relleno*: solo los píxeles que reciben proyección.
@@ -69,6 +70,10 @@ myRetopoUV-1.3.0-portable-x64.zip     2b0c2a3c99cfca67bc26b8a02a6d4509b076c570d1
 
 **Superponer.** El botón que hay encima de los dos visores 3D reúne el Hi Poly y el Lo Poly en un único visor, con el Lo Poly semitransparente y su malla en alambre, para comprobar de un vistazo que la retopología cae sobre la superficie original. El mismo botón, que pasa a llamarse **Salir de superposición**, devuelve la rejilla. En ese visor, los botones **HiPoly** y **LoPoly** de la cabecera ocultan o devuelven cada modelo por separado, para revisar uno de los dos sin el otro delante.
 
+**Mover, girar y escalar.** Si los modelos no coinciden, en la superposición **W** mueve, **E** gira y **R** escala el modelo con un gizmo al estilo de 3ds Max: las flechas restringen a un eje, los cuadrados a un plano y el centro mueve libre en el plano de la vista o escala de forma uniforme siguiendo al ratón; al girar hay un anillo por eje, el exterior gira en el plano de la vista y el interior gira libre. Pulsar otra vez la tecla del modo activo, o Escape, sale del modo. La cabecera del visor repite los modos y añade **Objeto**, que elige el modelo (el LoPoly por defecto, o un clic sobre él mientras transformas), y **Restablecer**, que lo devuelve a como se cargó; **Ctrl+Z** deshace el último cambio. La transformación se aplica al propio modelo, así que **Calcular** usa ya la posición corregida.
+
+**Arrastrar y soltar.** Los modelos y las texturas se pueden soltar sobre los visores: los del Hi Poly (3D y UV) abren como Hi Poly y los del Lo Poly como Lo Poly; en la superposición, la mitad izquierda es el Hi Poly y la derecha el Lo Poly. Las texturas soltadas sobre el Hi Poly van al mapa y al UDIM que indica su nombre (`Modelo_Normal_1002.png`); si el nombre no lleva UDIM cubren todas, y si no se reconoce el tipo de mapa van al mapa visible y al UDIM que muestra la vista UV.
+
 **Resaltar elementos.** Un clic en cualquiera de los modelos, en el visor 3D o en su vista UV, resalta la isla UV o el polígono al que pertenece el elemento, a la vez en el visor 3D y en la vista UV de ese mismo modelo. El relleno es semitransparente y de un color complementario al de la textura en ese punto, para que se vea bien con cualquier mapa sin tapar el color. Pasar el puntero por encima no resalta nada, y otro clic sobre el mismo elemento quita el resaltado. El botón **Elemento: Isla / Polígono**, a la derecha de la fila de Superponer, decide si el resaltado abarca la isla UV completa o solo la cara; se distingue únicamente por su texto. En 3D se elige la primera cara que alcanza el rayo desde el punto de vista, aunque haya geometría por detrás.
 
 En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o **UV LoPoly** va seguido del nombre del archivo abierto, y en la esquina inferior derecha de los visores 3D y del superpuesto se lee el número de **polígonos, tris y vértices** del modelo cargado.
@@ -78,6 +83,14 @@ En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o
 **Rendimiento orientativo** (205.000 triángulos, mapa de 2048, medido en una RTX 2060): a 2048 con AA 4 tarda 0,9 s por UDIM en GPU frente a unos 35 s en CPU; a 4096 la diferencia es de unos 3 s frente a casi 3 minutos. Por debajo de 1024 el arranque del motor pesa más que el cálculo y la ventaja se reduce.
 
 ## Historial de versiones
+
+### 1.3.1
+
+- **Transformaciones en la superposición**: **W** mueve, **E** gira y **R** escala cualquiera de los dos modelos con un gizmo al estilo de 3ds Max, por ejes, por planos o libre; la misma tecla o Escape sale del modo. La cabecera del visor añade **Objeto** y **Restablecer**, y **Ctrl+Z** deshace. El cambio se aplica al propio modelo, de modo que el cálculo usa la posición corregida.
+- **Arrastrar y soltar** modelos y texturas sobre los visores: cada visor abre como su modelo y, en la superposición, cada mitad es uno de los dos. Las texturas van al mapa y al UDIM que indica su nombre.
+- **La interfaz ya no se congela** en las partes más pesadas: la lectura de los OBJ, el reparto por UDIM y el relleno se calculan aparte, con el mismo resultado; las texturas se abren y el PNG se prepara sin bloquear la ventana.
+- La lista de archivos de cada mapa ya no repite una textura que cubre varios UDIM, y el diálogo de créditos muestra el icono de myApps.
+- La **versión portable** lleva lo mismo que el instalador, sin archivos de trabajo, y ocupa menos.
 
 ### 1.3.0
 
