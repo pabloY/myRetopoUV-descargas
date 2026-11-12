@@ -11,6 +11,21 @@ Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para
 
 Las dos formas dejan el programa igual de completo: llevan el motor de bake y las licencias junto al ejecutable.
 
+### Todas las versiones
+
+Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archivo directamente; las novedades de cada una están en el [historial de versiones](#historial-de-versiones). La versión portable existe desde la 1.3.0.
+
+| Versión | Instalador | Portable | Notas |
+|---|---|---|---|
+| **1.3.0** (última) | [myRetopoUV-Setup-1.3.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-Setup-1.3.0-x64.exe) | [myRetopoUV-1.3.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-1.3.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.0) |
+| 1.2.1 | [myRetopoUV-Setup-1.2.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.2.1/myRetopoUV-Setup-1.2.1-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.2.1) |
+| 1.2.0 | [myRetopoUV-Setup-1.2.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.2.0/myRetopoUV-Setup-1.2.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.2.0) |
+| 1.1.0 | [myRetopoUV-Setup-1.1.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.1.0/myRetopoUV-Setup-1.1.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.1.0) |
+| 1.0.0 | [myRetopoUV-Setup-1.0.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.0.0/myRetopoUV-Setup-1.0.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.0.0) |
+| 0.3.0 | [myRetopoUV-Setup-0.3.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v0.3.0/myRetopoUV-Setup-0.3.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v0.3.0) |
+| 0.2.0 | [myRetopoUV-Setup-0.2.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v0.2.0/myRetopoUV-Setup-0.2.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v0.2.0) |
+| 0.1.0 | [myRetopoUV-Setup-0.1.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v0.1.0/myRetopoUV-Setup-0.1.0-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v0.1.0) |
+
 **Requisitos:** Windows 10 u 11 de 64 bits y, para acelerar, una tarjeta **NVIDIA** con capacidad de cómputo **7.5 o superior**: GTX 16xx y todas las RTX. Un solo binario incluye código nativo para sm_75, sm_80, sm_86, sm_89, sm_90, sm_100 y sm_120, más PTX de reserva para arquitecturas futuras. No hace falta ser administrador, ni tener conexión a internet, ni instalar el CUDA Toolkit: del controlador de NVIDIA solo se usa el que ya tienes instalado.
 
 **Sin GPU NVIDIA compatible** el programa funciona igual: el cálculo se hace en la CPU, con el mismo resultado y más tiempo. La cabecera de la ventana indica siempre qué motor se está usando, y en el caso de una GPU AMD avisa de que no se está aprovechando.
