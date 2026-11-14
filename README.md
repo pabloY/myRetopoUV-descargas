@@ -6,8 +6,8 @@ Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para
 
 **[Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myRetopoUV-Setup-1.4.0-x64.exe`**: instalador. Se instala solo para tu usuario, sin permisos de administrador ni aviso de UAC.
-- **`myRetopoUV-1.4.0-portable-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myRetopoUV.exe`; no instala nada y se puede llevar en un lápiz USB.
+- **`myRetopoUV-Setup-3.4.1-x64.exe`**: instalador. Se instala solo para tu usuario, sin permisos de administrador ni aviso de UAC.
+- **`myRetopoUV-3.4.1-portable-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myRetopoUV.exe`; no instala nada y se puede llevar en un lápiz USB.
 
 Las dos formas dejan el programa igual de completo: llevan el motor de bake y las licencias junto al ejecutable.
 
@@ -17,7 +17,8 @@ Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archi
 
 | Versión | Instalador | Portable | Notas |
 |---|---|---|---|
-| **1.4.0** (última) | [myRetopoUV-Setup-1.4.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.4.0/myRetopoUV-Setup-1.4.0-x64.exe) | [myRetopoUV-1.4.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.4.0/myRetopoUV-1.4.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.4.0) |
+| **3.4.1** (última) | [myRetopoUV-Setup-3.4.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.4.1/myRetopoUV-Setup-3.4.1-x64.exe) | [myRetopoUV-3.4.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.4.1/myRetopoUV-3.4.1-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v3.4.1) |
+| 1.4.0 | [myRetopoUV-Setup-1.4.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.4.0/myRetopoUV-Setup-1.4.0-x64.exe) | [myRetopoUV-1.4.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.4.0/myRetopoUV-1.4.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.4.0) |
 | 1.3.1 | [myRetopoUV-Setup-1.3.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.1/myRetopoUV-Setup-1.3.1-x64.exe) | [myRetopoUV-1.3.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.1/myRetopoUV-1.3.1-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.1) |
 | 1.3.0 | [myRetopoUV-Setup-1.3.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-Setup-1.3.0-x64.exe) | [myRetopoUV-1.3.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.0/myRetopoUV-1.3.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.0) |
 | 1.2.1 | [myRetopoUV-Setup-1.2.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.2.1/myRetopoUV-Setup-1.2.1-x64.exe) | — | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.2.1) |
@@ -45,14 +46,14 @@ Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archi
 Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da PowerShell:
 
 ```powershell
-Get-FileHash .\myRetopoUV-Setup-1.4.0-x64.exe -Algorithm SHA256
+Get-FileHash .\myRetopoUV-Setup-3.4.1-x64.exe -Algorithm SHA256
 ```
 
-Las de la versión 1.4.0 son:
+Las de la versión 3.4.1 son:
 
 ```
-myRetopoUV-Setup-1.4.0-x64.exe       8a962859a1b75f6d0d74d8787c54a82a2fe4d5058007e34e28360dfd401878c5
-myRetopoUV-1.4.0-portable-x64.zip    72d4fee9bb7beb321fbe335641bb88edbebc6c19c86f390647bada20bf720bae
+myRetopoUV-Setup-3.4.1-x64.exe       e8876b12504ddd78f28684abb491a68db142fd444f289a85247aff687315104f
+myRetopoUV-3.4.1-portable-x64.zip    a5e6ba9e5d2e964e51faba8cb0037529fe29fc9ac2c490c3b14a495de6a62541
 ```
 
 ## Uso rápido
@@ -84,6 +85,12 @@ En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o
 **Rendimiento orientativo** (205.000 triángulos, mapa de 2048, medido en una RTX 2060): a 2048 con AA 4 tarda 0,9 s por UDIM en GPU frente a unos 35 s en CPU; a 4096 la diferencia es de unos 3 s frente a casi 3 minutos. Por debajo de 1024 el arranque del motor pesa más que el cálculo y la ventaja se reduce.
 
 ## Historial de versiones
+
+### 3.4.1
+
+- **Topología original** en 3D, UV y Superponer. Los quads conservan sus cuatro lados
+  y los triángulos originales conservan sus tres aristas.
+- **Polígono** resalta la cara completa.
 
 ### 1.4.0
 
