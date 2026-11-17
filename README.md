@@ -1,13 +1,13 @@
 # myRetopoUV
 
-Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX**, **OBJ**, **USDZ** o **USDA**) alineados en el mismo espacio 3D y proyecta el mapa del Hi Poly que elijas —color base, normal, rugosidad, metalicidad, altura, oclusión, emisivo u opacidad— sobre la malla de retopología. Las texturas que acompañan al modelo se detectan y agrupan solas, tanto con nombres tipo Substance Painter como incrustadas en el propio archivo. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, resaltado de islas UV y de polígonos con un clic, un visor superpuesto con el recuento de polígonos, tris y vértices de cada modelo en el que se puede mover, girar y escalar cualquiera de los dos para alinearlos, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión. Incluye **retopología** con Blender y QuadriFlow, **mapeado UV** automático y un panel de **bake de detalle** (Normal, AO y Height) con vista PBR.
+Transferencia de color de un **Hi Poly** a las nuevas UV de un **Lo Poly**, para Windows, de **Pablo**. Carga los dos modelos (**GLB**, **FBX**, **OBJ**, **USDZ** o **USDA**) alineados en el mismo espacio 3D y proyecta el mapa del Hi Poly que elijas —color base, normal, rugosidad, metalicidad, altura, oclusión, emisivo u opacidad— sobre la malla de retopología. Las texturas que acompañan al modelo se detectan y agrupan solas, tanto con nombres tipo Substance Painter como incrustadas en el propio archivo. El cálculo se hace por **GPU con CUDA**: resoluciones de 256 a 8192, **antialiasing** de 1, 2, 4 u 8 muestras, **relleno (dilatación)** con margen configurable y soporte de **tiles UDIM**. Incluye dos visores 3D con órbita y zoom, dos vistas UV, resaltado de islas UV y de polígonos con un clic, un visor superpuesto con el recuento de polígonos, tris y vértices de cada modelo en el que se puede mover, girar y escalar cualquiera de los dos para alinearlos, y un indicador que muestra en todo momento si el cálculo se hace en GPU o en CPU. Funciona sin conexión. Incluye **retopología** con Blender y QuadriFlow, **mapeado UV** automático y un panel de **bake de detalle** (Normal, AO y Height) con vista PBR, y un botón **Añadir mapa** para importar mapas adicionales eligiendo su tipo y su UDIM.
 
 ## Descargar
 
 **[Descargar la última versión](https://github.com/pabloY/myRetopoUV-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myRetopoUV-Setup-3.6.0-x64.exe`**: instalador. Se instala solo para tu usuario, sin permisos de administrador ni aviso de UAC.
-- **`myRetopoUV-3.6.0-portable-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myRetopoUV.exe`; no instala nada y se puede llevar en un lápiz USB.
+- **`myRetopoUV-Setup-3.7.0-x64.exe`**: instalador. Se instala solo para tu usuario, sin permisos de administrador ni aviso de UAC.
+- **`myRetopoUV-3.7.0-portable-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myRetopoUV.exe`; no instala nada y se puede llevar en un lápiz USB.
 
 Las dos formas dejan el programa igual de completo: llevan el motor de bake y las licencias junto al ejecutable.
 
@@ -17,7 +17,8 @@ Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archi
 
 | Versión | Instalador | Portable | Notas |
 |---|---|---|---|
-| **3.6.0** (última) | [myRetopoUV-Setup-3.6.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.6.0/myRetopoUV-Setup-3.6.0-x64.exe) | [myRetopoUV-3.6.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.6.0/myRetopoUV-3.6.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v3.6.0) |
+| **3.7.0** (última) | [myRetopoUV-Setup-3.7.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.7.0/myRetopoUV-Setup-3.7.0-x64.exe) | [myRetopoUV-3.7.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.7.0/myRetopoUV-3.7.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v3.7.0) |
+| 3.6.0 | [myRetopoUV-Setup-3.6.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.6.0/myRetopoUV-Setup-3.6.0-x64.exe) | [myRetopoUV-3.6.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.6.0/myRetopoUV-3.6.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v3.6.0) |
 | 3.4.1 | [myRetopoUV-Setup-3.4.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.4.1/myRetopoUV-Setup-3.4.1-x64.exe) | [myRetopoUV-3.4.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.4.1/myRetopoUV-3.4.1-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v3.4.1) |
 | 1.4.0 | [myRetopoUV-Setup-1.4.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.4.0/myRetopoUV-Setup-1.4.0-x64.exe) | [myRetopoUV-1.4.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.4.0/myRetopoUV-1.4.0-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.4.0) |
 | 1.3.1 | [myRetopoUV-Setup-1.3.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.1/myRetopoUV-Setup-1.3.1-x64.exe) | [myRetopoUV-1.3.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v1.3.1/myRetopoUV-1.3.1-portable-x64.zip) | [Release](https://github.com/pabloY/myRetopoUV-descargas/releases/tag/v1.3.1) |
@@ -47,14 +48,14 @@ Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archi
 Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da PowerShell:
 
 ```powershell
-Get-FileHash .\myRetopoUV-Setup-3.6.0-x64.exe -Algorithm SHA256
+Get-FileHash .\myRetopoUV-Setup-3.7.0-x64.exe -Algorithm SHA256
 ```
 
-Las de la versión 3.6.0 son:
+Las de la versión 3.7.0 son:
 
 ```
-myRetopoUV-Setup-3.6.0-x64.exe       9cde34def6cce44424cf931676ca7da36027cb9a11a84a70b197b04e4e74d3bb
-myRetopoUV-3.6.0-portable-x64.zip    1a4a38b66b9bcc49ff4ef4c08268034988a9d93ce8bcc881b949eb9d1c8b2fab
+myRetopoUV-Setup-3.7.0-x64.exe       3bf5d93e72efc7e0e32b2f148d6f4916af6285d80137753fa719252c6b94598a
+myRetopoUV-3.7.0-portable-x64.zip    0642463dc2acbe0e86f16c3d90d254db9c3bb9259a7a1dc4ee1699024eff8d29
 ```
 
 ## Manuales
@@ -96,6 +97,11 @@ En la cabecera de cada visor, el rótulo **HiPoly**, **LoPoly**, **UV HiPoly** o
 **Rendimiento orientativo** (205.000 triángulos, mapa de 2048, medido en una RTX 2060): a 2048 con AA 4 tarda 0,9 s por UDIM en GPU frente a unos 35 s en CPU; a 4096 la diferencia es de unos 3 s frente a casi 3 minutos. Por debajo de 1024 el arranque del motor pesa más que el cálculo y la ventaja se reduce.
 
 ## Historial de versiones
+
+### 3.7.0
+
+- Botón **Añadir mapa** para importar mapas que la búsqueda automática no reconoció: se elige el tipo de mapa (todos los que interpreta el motor PBR) y los nombres con UDIM se asignan a su UDIM correspondiente; si el tipo ya tenía mapas en esos UDIM, se sustituyen por los nuevos.
+- Nuevo tipo **Independiente**: aparece en el selector «Mapa de textura», se puede calcular al LoPoly y guardar, y no se incluye en la vista PBR.
 
 ### 3.6.0
 
