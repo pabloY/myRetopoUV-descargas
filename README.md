@@ -57,6 +57,16 @@ myRetopoUV-Setup-3.6.0-x64.exe       9cde34def6cce44424cf931676ca7da36027cb9a11a
 myRetopoUV-3.6.0-portable-x64.zip    1a4a38b66b9bcc49ff4ef4c08268034988a9d93ce8bcc881b949eb9d1c8b2fab
 ```
 
+## Manuales
+
+- **[Cómo nombrar y colocar las texturas del HiPoly](MANUAL-MAPAS.pdf)** (PDF):
+  nombres, ubicación, tipos, UDIM y conjuntos que reconoce la búsqueda automática.
+- **[Cómo se guardan los mapas generados y dónde encontrarlos](MANUAL-GUARDADO.pdf)** (PDF):
+  carpetas, nombres de los PNG, manifiesto y formato del modelo guardado.
+
+También están disponibles en Markdown: [MANUAL-MAPAS.md](MANUAL-MAPAS.md) y
+[MANUAL-GUARDADO.md](MANUAL-GUARDADO.md).
+
 ## Uso rápido
 
 1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX, OBJ, USDZ o USDA), alineados en el mismo espacio 3D, con sus botones o arrastrando el archivo sobre los visores de cada modelo. Las UV del Lo Poly deben ser únicas dentro de 0-1 o estar repartidas en tiles UDIM. Al abrir el Hi Poly se detectan solas las texturas que lo acompañan y aparecen en el selector **Mapa de textura**, agrupadas por tipo (Base Color, Normal, Roughness, Metallic, Metallic/Roughness, Height, Ambient Occlusion, Emissive, Opacidad y Specular).
