@@ -10,6 +10,12 @@ Los componentes que se listan a continuacion estan sujetos a SUS PROPIAS
 licencias, que prevalecen sobre la de myRetopoUV en lo que respecta a esos
 componentes.
 
+La retopologia puede invocar una instalacion externa de Blender por separado.
+Blender se distribuye bajo la GNU GPL, con avisos propios para los componentes
+que incluye. Los paquetes de myRetopoUV solo incluyen el script de intercambio
+de geometria. Los binarios y librerias de Blender se obtienen de su distribucion.
+Licencia de Blender: https://github.com/blender/blender/blob/main/COPYING
+
 
 1. COMPONENTES INCLUIDOS Y UBICACION DE SU LICENCIA
 ---------------------------------------------------
@@ -84,6 +90,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 fflate se incluye como dependencia interna de three.js (cargadores FBX).
+
+El cargador USD (USDLoader, USDAParser, USDCParser y USDComposer) procede de
+three.js 0.187.0, con la misma licencia MIT, y se incluye adaptado a la
+version 0.170.0 en src/vendor/three-usd.
 
 4. NSIS 3.0.4.1 (motor del instalador)
 -------------------------------------

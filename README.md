@@ -20,7 +20,8 @@ portable existe desde la 1.3.
 
 | Versión | Instalador | Portable |
 |---|---|---|
-| **3.8.0** (última) | [Setup-3.8.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.8.0/myRetopoUV-Setup-3.8.0-x64.exe) | [3.8.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.8.0/myRetopoUV-3.8.0-portable-x64.zip) |
+| **3.9.0** (última) | [Setup-3.9.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.9.0/myRetopoUV-Setup-3.9.0-x64.exe) | [3.9.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.9.0/myRetopoUV-3.9.0-portable-x64.zip) |
+| 3.8.0 | [Setup-3.8.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.8.0/myRetopoUV-Setup-3.8.0-x64.exe) | [3.8.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.8.0/myRetopoUV-3.8.0-portable-x64.zip) |
 | 3.7.0 | [Setup-3.7.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.7.0/myRetopoUV-Setup-3.7.0-x64.exe) | [3.7.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.7.0/myRetopoUV-3.7.0-portable-x64.zip) |
 | 3.6.0 | [Setup-3.6.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.6.0/myRetopoUV-Setup-3.6.0-x64.exe) | [3.6.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.6.0/myRetopoUV-3.6.0-portable-x64.zip) |
 | 3.4.1 | [Setup-3.4.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.4.1/myRetopoUV-Setup-3.4.1-x64.exe) | [3.4.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.4.1/myRetopoUV-3.4.1-portable-x64.zip) |
@@ -57,15 +58,15 @@ Cada versión incluye `SHA256SUMS.txt` con la huella de sus archivos, para compr
 
 ## Uso rápido
 
-1. Carga el **Hi Poly** y el **Lo Poly** (GLB, FBX, OBJ, USDZ o USDA), alineados en el mismo espacio
+1. Carga el **Hi Poly** y el **Lo Poly** (GLB, glTF, FBX, OBJ, USDZ, USDA o USDC), alineados en el mismo espacio
    3D, con sus botones o arrastrándolos a los visores. Las texturas del Hi Poly se detectan solas.
-2. Elige en **Mapa de textura** el mapa que quieres transferir y ajusta la resolución, la distancia
-   de proyección, el antialiasing y el relleno.
-3. Pulsa **Calcular** y, cuando termine, **Guardar textura**.
+2. Ajusta la resolución, la distancia de proyección, el antialiasing y el relleno. Con **Calcular
+   todos** (marcado por defecto) se transfieren todos los mapas; desmárcalo para calcular solo el
+   elegido en **Mapa de textura**. Los mapas que no se detecten solos se cargan con **Añadir mapa**.
+3. Pulsa **Calcular** y, cuando termine, **Guardar**.
 
 Si los modelos no coinciden, **Superponer** los muestra juntos y permite moverlos (`W`), girarlos
-(`E`) y escalarlos (`R`). Limitaciones: el FBX debe ser estático y el USD binario (`.usdc`) no está
-soportado.
+(`E`) y escalarlos (`R`). Limitación: el FBX debe ser estático.
 
 ## Creado por
 

@@ -168,21 +168,33 @@ En GLB, FBX y USDZ no hacen falta archivos aparte:
 ## 10. Mapas que no siguen el patrón: «Añadir mapa»
 
 Los mapas cuyo nombre no encaja no se cargan automáticamente. El botón
-**Añadir mapa…**, situado bajo el selector **Mapa de textura**, permitirá
+**Añadir mapa**, situado bajo el selector **Mapa de textura**, permite
 importarlos a mano.
 
-> **Función pendiente de implementar.** Esta sección describe su funcionamiento
-> previsto para que el manual siga siendo válido cuando esté disponible.
-
-### 10.1 Cómo se usará
+### 10.1 Cómo se usa
 
 1. Abre un HiPoly con UV.
-2. Pulsa **Añadir mapa…**.
-3. Elige el **tipo de mapa**: todos los de la tabla de la sección 3 más
-   **Independiente**.
-4. Pulsa **Elegir imágenes…** y selecciona una o varias (PNG, JPG/JPEG, WebP).
-5. Revisa la lista: cada archivo muestra el UDIM detectado o «todos los UDIM».
-6. Pulsa **Añadir**.
+2. Pulsa **Añadir mapa**. El selector de archivos se abre directamente en la
+   carpeta del HiPoly.
+3. Selecciona una o varias imágenes (PNG, JPG/JPEG, WebP).
+4. Revisa la lista: cada archivo muestra el UDIM detectado o «Todos los UDIM»
+   y una lista de botones de opción con el **tipo de mapa**, en tres grupos:
+   Color base, Metallic, Roughness, Emisivo y Specular; Normal, Height / Bump y
+   Ambient occlusion; Opacidad, Transmission, Translucency, SSS, Thickness e IOR.
+   Los empaquetados (Metallic/Roughness, ORM, RMA, MRA), Glossiness e
+   **Independiente** están plegados en **Más tipos**. El tipo detectado por el
+   nombre llega marcado. Si el nombre no lo indica, ninguno está marcado, se
+   avisa en amarillo y **Añadir** no se activa hasta que lo elijas. Debajo de la
+   lista se explica la función del tipo elegido en el material PBR.
+   Con un empaquetado elegido aparece la casilla **Separar en mapas
+   independientes**. Si la marcas, se cargan cuatro mapas: el empaquetado y uno en
+   escala de grises por canal (Ambient Occlusion, Roughness y Metallic; el de
+   Metallic/Roughness solo tiene los dos últimos). Los separados se guardan como
+   PNG en la carpeta del original, con su nombre y el tipo del canal
+   (`Foo_ORM_1001.png` → `Foo_AmbientOcclusion_1001.png`, `Foo_Roughness_1001.png`
+   y `Foo_Metallic_1001.png`), y la próxima vez se reconocen solos. Si ya existe
+   un archivo con ese nombre, no se sustituye y se avisa.
+5. **Cambiar archivos** vuelve a abrir el selector. Pulsa **Añadir**.
 
 ### 10.2 Asignación
 
@@ -190,7 +202,7 @@ importarlos a mano.
   esa tile.
 - Si no contiene UDIM, se aplica a todas las tiles del HiPoly.
 - Si el UDIM no existe en el HiPoly, el archivo se omite y se avisa.
-- El tipo elegido manda: no importa que el nombre contenga otro alias o ninguno.
+- El tipo que queda elegido en la lista manda, aunque el nombre indique otro.
 - Si ya había mapas de ese tipo en esas tiles, se sustituyen por los nuevos.
 - No se aplica la selección de conjunto de la búsqueda automática: los archivos se
   añaden al HiPoly abierto, sin comparar su nombre con el del modelo.
