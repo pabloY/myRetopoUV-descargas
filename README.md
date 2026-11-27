@@ -20,7 +20,7 @@ portable existe desde la 1.3.
 
 | Versión | Instalador | Portable |
 |---|---|---|
-| **3.10.0** (última) | [Setup-3.10.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.10.0/myRetopoUV-Setup-3.10.0-x64.exe) | [3.10.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.10.0/myRetopoUV-3.10.0-portable-x64.zip) |
+| **3.10.1** (última) | [Setup-3.10.1-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.10.1/myRetopoUV-Setup-3.10.1-x64.exe) | [3.10.1-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.10.1/myRetopoUV-3.10.1-portable-x64.zip) |
 | 3.9.0 | [Setup-3.9.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.9.0/myRetopoUV-Setup-3.9.0-x64.exe) | [3.9.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.9.0/myRetopoUV-3.9.0-portable-x64.zip) |
 | 3.8.0 | [Setup-3.8.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.8.0/myRetopoUV-Setup-3.8.0-x64.exe) | [3.8.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.8.0/myRetopoUV-3.8.0-portable-x64.zip) |
 | 3.7.0 | [Setup-3.7.0-x64.exe](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.7.0/myRetopoUV-Setup-3.7.0-x64.exe) | [3.7.0-portable-x64.zip](https://github.com/pabloY/myRetopoUV-descargas/releases/download/v3.7.0/myRetopoUV-3.7.0-portable-x64.zip) |
